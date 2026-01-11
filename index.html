@@ -1,0 +1,109 @@
+<!-- FILE: index.html -->
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<title>Untuk Kamu ❤️</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="bg"></div>
+
+<div class="card">
+  <img src="7.jpg" class="profile">
+
+  <h1>Hai, Cintaku ❤️</h1>
+  <p id="typing"></p>
+
+  <button onclick="changeMessage()">Pencet ini 💕</button>
+
+  <div class="gallery">
+    <img src="8.jpg" class="active">
+    <img src="9.jpg">
+    <img src="10.jpg">
+  </div>
+</div>
+
+<audio id="music" loop>
+  <source src="lagu.mp3" type="audio/mpeg">
+</audio>
+
+<button class="music-btn" onclick="toggleMusic()">🎵</button>
+
+<script>
+const messages = [
+  "Lagi suka sapa ni ❤️",
+  "Upsssss 🏡",
+  "Kepoo yaaaa 💍",
+  "Nanti ajaaaa 💕",
+  "Hihihihihihihihi 🤍"
+];
+
+let text = "Dunia ini luas, tapi knp kamu cakep banget asnaksdnakkak ...";
+let i = 0;
+
+function typeEffect() {
+  if(i < text.length){
+    document.getElementById('typing').innerHTML += text.charAt(i);
+    i++;
+    setTimeout(typeEffect, 60);
+  }
+}
+typeEffect();
+
+function changeMessage() {
+  const msg = messages[Math.floor(Math.random()*messages.length)];
+  document.getElementById('typing').innerText = msg;
+}
+
+/* SLIDESHOW */
+const photos = document.querySelectorAll('.gallery img');
+let index = 0;
+setInterval(()=>{
+  photos.forEach(p=>p.classList.remove('active'));
+  index = (index+1)%photos.length;
+  photos[index].classList.add('active');
+},3000);
+
+/* MUSIC */
+const music = document.getElementById('music');
+let play = false;
+function toggleMusic(){
+  play?music.pause():music.play();
+  play=!play;
+}
+
+/* HEART FLOAT */
+function createHeart(){
+ const h=document.createElement('div');
+ h.className='heart';
+ h.innerHTML='❤';
+ h.style.left=Math.random()*100+'vw';
+ h.style.animationDuration=(Math.random()*3+3)+'s';
+ document.body.appendChild(h);
+ setTimeout(()=>h.remove(),6000);
+}
+setInterval(createHeart,300);
+
+/* HEART BURST ON CLICK */
+document.addEventListener('click', (e)=>{
+  for(let i=0;i<8;i++){
+    const h=document.createElement('div');
+    h.className='heart burst';
+    h.innerHTML='❤';
+    h.style.left=e.clientX+'px';
+    h.style.top=e.clientY+'px';
+    h.style.transform=`translate(${Math.random()*100-50}px,${Math.random()*100-50}px)`;
+    document.body.appendChild(h);
+    setTimeout(()=>h.remove(),1000);
+  }
+});
+</script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+
+</body>
+</html> 
+
+
