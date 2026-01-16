@@ -63,12 +63,19 @@ header {
 .logo:hover {
     transform: scale(1.1);
 }
+/* Untuk layar HP (max-width 768px) */
 @media (max-width: 768px) {
-  .nav-menu {
-    display: none; /* <--- Ini yang sering bikin menu hilang di HP */
-  }
-}
+    nav {
+        display: flex;
+        justify-content: center; /* Mengetengahkan menu */
+        gap: 1.5rem; /* Memberi jarak antar menu tanpa margin besar */
+    }
 
+    nav a {
+        margin-left: 0; /* Hapus margin 4rem yang bikin hilang */
+        font-size: 1.4rem; /* Kecilkan sedikit font agar muat */
+    }
+}
 nav a {
     font-size: 1.8rem;
     color: var(--text-dark);
@@ -357,5 +364,6 @@ section {
     .home-img img { width: 90%; }
 
 }
+
 
 
