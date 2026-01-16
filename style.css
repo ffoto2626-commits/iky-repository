@@ -300,6 +300,11 @@ section {
     text-align: center;
     color: white;
 }
+footer {
+    width: 100vw; /* Mengikuti lebar layar */
+    margin-left: calc(-50vw + 50%); /* Menarik keluar jika ada padding di parent */
+    margin-right: calc(-50vw + 50%);
+}
 
 .social-media a {
     width: 5rem;
@@ -353,4 +358,5 @@ section {
 @media (max-width: 450px) {
     html { font-size: 50%; }
     .home-img img { width: 90%; }
+
 }
