@@ -65,7 +65,7 @@ header {
 }
 
 }
-nav a {
+.nav a {
     font-size: 1.8rem;
     color: var(--text-dark);
     margin-left: 4rem;
@@ -74,7 +74,7 @@ nav a {
     border-bottom: 3px solid transparent;
 }
 
-nav a:hover, nav a.active {
+.nav a:hover, nav a.active {
     color: var(--main-color);
     border-bottom: 3px solid var(--main-color);
 }
@@ -352,6 +352,7 @@ section {
     .home-img img { width: 90%; }
 
 }
+
 
 
 
