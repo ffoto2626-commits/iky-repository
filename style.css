@@ -42,11 +42,10 @@ header {
     top: 0;
     left: 0;
     width: 100%;
-    padding: 2rem 8%;
+    padding: 2rem 9%;
     background-color: rgba(255, 255, 255, 0.7);
     backdrop-filter: blur(10px);
     display: flex;
-    gap: 1.5rem;
     justify-content: space-between;
     align-items: center;
     z-index: 1000;
@@ -66,10 +65,10 @@ header {
 }
 
 nav a {
-    font-size: 1.5rem;
+    font-size: 1.8rem;
     color: var(--text-dark);
-    margin-left: 0rem;
-    font-weight: 600;
+    margin-left: 4rem;
+    font-weight: 500;
     transition: var(--transition);
     border-bottom: 3px solid transparent;
 }
@@ -297,15 +296,15 @@ section {
 /* --- FOOTER --- */
 
 .footer {
-    background: #1a1a1a;
-    padding: 5rem 9%;
-    text-align: center;
-    color: white;
+    background: #1a1a1a;
+    padding: 5rem 9%;
+    text-align: center;
+    color: white;
 }
 .footer {
-    width: 100vw; /* Mengikuti lebar layar */
-    margin-left: calc(-50vw + 50%); /* Menarik keluar jika ada padding di parent */
-    margin-right: calc(-50vw + 50%);
+    width: 100vw; /* Mengikuti lebar layar */
+    margin-left: calc(-50vw + 50%); /* Menarik keluar jika ada padding di parent */
+    margin-right: calc(-50vw + 50%);
 
 
 
@@ -363,9 +362,3 @@ section {
     .home-img img { width: 90%; }
 
 }
-
-
-
-
-
-
