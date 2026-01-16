@@ -65,18 +65,35 @@ header {
 }
 
 }
+/* Aturan Umum */
+.nav {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap; /* Supaya kalau gak muat, dia turun ke bawah, bukan hilang */
+}
+
 .nav a {
     font-size: 1.8rem;
     color: var(--text-dark);
-    margin-left: 4rem;
+    margin-left: 4rem; /* Ini untuk laptop */
     font-weight: 500;
     transition: var(--transition);
     border-bottom: 3px solid transparent;
 }
 
-.nav a:hover, nav a.active {
-    color: var(--main-color);
-    border-bottom: 3px solid var(--main-color);
+/* KHUSUS UNTUK HP */
+@media (max-width: 768px) {
+    .nav {
+        justify-content: center; /* Menu jadi di tengah */
+        width: 100%;
+        margin-top: 1rem; /* Kasih jarak dari logo */
+    }
+
+    .nav a {
+        margin-left: 1.5rem; /* Margin dikecilkan drastis */
+        margin-right: 1.5rem;
+        font-size: 1.5rem; /* Font diperkecil supaya muat satu baris */
+    }
 }
 /* --- SECTION GENERAL --- */
 section {
@@ -352,6 +369,7 @@ section {
     .home-img img { width: 90%; }
 
 }
+
 
 
 
