@@ -304,6 +304,11 @@ section {
     width: 100vw; /* Mengikuti lebar layar */
     margin-left: calc(-50vw + 50%); /* Menarik keluar jika ada padding di parent */
     margin-right: calc(-50vw + 50%);
+
+/* Pastikan footer didorong ke paling bawah */
+footer {
+    margin-top: auto; 
+    width: 100%;
 }
 
 .social-media a {
@@ -360,4 +365,5 @@ section {
     .home-img img { width: 90%; }
 
 }
+
 
