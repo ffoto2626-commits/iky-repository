@@ -63,6 +63,11 @@ header {
 .logo:hover {
     transform: scale(1.1);
 }
+@media (max-width: 768px) {
+  .nav-menu {
+    display: none; /* <--- Ini yang sering bikin menu hilang di HP */
+  }
+}
 
 nav a {
     font-size: 1.8rem;
@@ -352,4 +357,5 @@ section {
     .home-img img { width: 90%; }
 
 }
+
 
