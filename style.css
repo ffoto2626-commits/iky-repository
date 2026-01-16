@@ -306,7 +306,7 @@ section {
     margin-right: calc(-50vw + 50%);
 
 /* Pastikan footer didorong ke paling bawah */
-footer {
+.footer {
     margin-top: auto; 
     width: 100%;
 }
@@ -365,5 +365,6 @@ footer {
     .home-img img { width: 90%; }
 
 }
+
 
 
