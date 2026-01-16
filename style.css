@@ -295,16 +295,6 @@ section {
 
 /* --- FOOTER --- */
 
-.footer {
-    background: #1a1a1a;
-    padding: 5rem 9%;
-    text-align: center;
-    color: white;
-}
-.footer {
-    width: 100vw; /* Mengikuti lebar layar */
-    margin-left: calc(-50vw + 50%); /* Menarik keluar jika ada padding di parent */
-    margin-right: calc(-50vw + 50%);
 
 
 
@@ -362,3 +352,4 @@ section {
     .home-img img { width: 90%; }
 
 }
+
